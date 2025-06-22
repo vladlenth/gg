@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Фон с треугольником</title>
+<style>
+
+body {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  background-color: #0000ff; /* весь фон — синий */
+  display: flex;
+  justify-content: center; /* по горизонтали центрировать */
+  align-items: flex-start; /* по вертикали — сверху */
+}
+
+.rectangle {
+  width: 100%; /* занимает всю ширину */
+  height: 300px; /* высота треугольника */
+  background-color: #797988;
+
+  clip-path: polygon(
+    0 0,             /* верх левый */
+    100% 0,          /* верх правый */
+    0 calc(100%)     /* низ слева */
+  );
+}
+</style>
+</head>
+<body>
+
+<div class="rectangle"></div>
+
+</body>
+</html>
